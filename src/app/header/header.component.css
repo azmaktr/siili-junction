@@ -2,6 +2,11 @@
     width: 200px;
     padding: 10px 0px;
 }
+.bg-dark{
+	background: whitesmoke !important;
+}
 .nav > li {
     padding: 8px;
+    color: black !important;
 }
+.label,.glyphicon { margin-right:5px; }
