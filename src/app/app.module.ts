@@ -8,10 +8,12 @@ import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from './search.component';
+import { FourOhfourComponent } from './four-ohfour/four-ohfour.component';
 const appRoutes: Routes = [
   { path: 'search', component: SearchComponent },
   { path: '', component: LoginComponent },
-  { path: '**', component: AppComponent }
+  { path: '404', component: FourOhfourComponent },
+  { path: '**', redirectTo: '/404' }
 ];
 
 
@@ -22,6 +24,7 @@ const appRoutes: Routes = [
     LoginComponent,
     FooterComponent,
     SearchComponent,
+    FourOhfourComponent,
   ],
   imports: [
     BrowserModule,
