@@ -2,6 +2,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 
+
 import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./header/header.component";
 import { LoginComponent } from "./login/login.component";
@@ -11,14 +12,15 @@ import { FourOhfourComponent } from "./four-ohfour/four-ohfour.component";
 import { AuthService } from "./services/auth.service";
 import { AuthGuardService } from "./services/auth-guard.service";
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 const appRoutes: Routes = [
   { path: "search/:id", component: SearchComponent, canActivate: [AuthGuardService] },
   { path: "", component: LoginComponent },
   { path: "dashboard", component: DashboardComponent, canActivate: [AuthGuardService] },
+  {path: 'register', component: RegistrationComponent},  
   { path: "404", component: FourOhfourComponent },
   { path: "**", redirectTo: "/404" }
-];
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ const appRoutes: Routes = [
     FooterComponent,
     SearchComponent,
     FourOhfourComponent,
-    DashboardComponent
+    DashboardComponent,
+    RegistrationComponent,
   ],
   imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
   providers: [AuthService, AuthGuardService],
