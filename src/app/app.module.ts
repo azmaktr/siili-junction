@@ -14,12 +14,14 @@ import { AuthGuardService } from "./services/auth-guard.service";
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { FormsModule }   from '@angular/forms';
+import { ProductComponent } from './product/product.component';
 
 const appRoutes: Routes = [
   { path: "search/:id", component: SearchComponent, canActivate: [AuthGuardService] },
   { path: "", component: LoginComponent },
   { path: "dashboard", component: DashboardComponent, canActivate: [AuthGuardService] },
   {path: 'register', component: RegistrationComponent},  
+  {path: 'product/:id', component: ProductComponent}, 
   { path: "404", component: FourOhfourComponent },
   { path: "**", redirectTo: "/404" }
 ]
@@ -34,6 +36,7 @@ const appRoutes: Routes = [
     FourOhfourComponent,
     DashboardComponent,
     RegistrationComponent,
+    ProductComponent,
   ],
   imports: [BrowserModule, RouterModule.forRoot(appRoutes), FormsModule],
   providers: [AuthService, AuthGuardService],
