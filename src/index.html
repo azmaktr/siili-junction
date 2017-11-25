@@ -26,24 +26,46 @@
       color: #f48342;
     }
 
-    .card-text{
+    .card-text {
       height: 52px;
       overflow: hidden;
     }
-    .card{
+
+    .card {
       margin-bottom: 20px;
     }
+
     .card .btn {
-      background-color: #d62d20;
-      border: #d62d20;
+      background-color: #F4A842;
+      border: #F4A842;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .card-img-holder {
+      height: 195px;
+      overflow: hidden;
+      position: relative;
+    }
+    .card-img-holder img{
+      max-width: 100%;
+    }
+
+    .card-price-holder {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: #f48342;
+      padding: 1em;
+      color: white;
+      font-weight: bold;
+      font-size: 13px;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <app-root></app-root>
-  </div>
+  <app-root></app-root>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

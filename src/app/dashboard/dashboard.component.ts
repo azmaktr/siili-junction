@@ -24,7 +24,9 @@ export class DashboardComponent implements OnInit {
     this.lastSearch = localStorage.getItem('lastsearch');
     this.searched = !!this.lastSearch;
     if (!!this.lastSearch){
-      this.results = this.allResults.searchQty(this.lastSearch, 4);
+      this.allResults.searchQty(this.lastSearch, 4).subscribe(results => {
+        this.results = results;
+      });
     }
   }
 

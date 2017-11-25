@@ -7,7 +7,7 @@
 
         <form #searchForm="ngForm" (submit)="onSubmit(searchForm)">
           <input placeholder="Search for stuff you want to buy." class="input-txt" name="id" type="text" ngModel>
-          <button class="btn btn-success" style="background-color:#d62d20;border:#d62d20;" type="submit" value="Search">Search</button>
+          <button class="btn btn-success" style="background-color:#F4A842;border:#F4A842;" type="submit" value="Search">Search</button>
         </form>
       </div>
     </div>
@@ -22,7 +22,9 @@
   <div class="col-12">
     <div class="store-help">
       <h3>Want your ad in here?</h3>
-      <p>Do you have stuff laying around in your basement? you can use our service to rent/sell it. We provide a platform which reduces the carbon footprint in the world by connecting buyers who can manage their basement storage by using our application and additionally sell/rent the stuff which they don't need right away. Sounds interesting? </p>
+      <p>Do you have stuff laying around in your basement? you can use our service to rent/sell it. We provide a platform which
+        reduces the carbon footprint in the world by connecting buyers who can manage their basement storage by using our
+        application and additionally sell/rent the stuff which they don't need right away. Sounds interesting? </p>
       <a href="/about-us">This is how you can do it!</a>
     </div>
   </div>
@@ -32,15 +34,22 @@
 
 <h2>Your last search results:</h2>
 <p *ngIf="!searched">You haven't searched anything yet.</p>
-<div *ngIf="searched" class="row">
-  <div class="col-3" *ngFor="let result of results; let i=index">
-    <div class="card card-{{i}}">
-      <img class="card-img-top " src="{{result.image}}" alt="Card image cap">
-      <div class="card-body">
-        <h4 class="card-title">{{result.title}}</h4>
-        <p class="card-text">{{result.description}}</p>
-        <a href="/product/{{result.id}}" class="btn btn-primary">Go Buy!</a>
+  <p *ngIf="searched&&!results">Loading...
+    <img width="80px" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" />
+  </p>
+  <div *ngIf="searched&&results" class="row">
+    <div class="col-3 animated fadeIn" *ngFor="let result of results; let i=index">
+      <div class="card card-{{i}}">
+        <a href="/product/{{result.objectid}}" class="card-img-holder">
+          <img class="card-img-top " onError="this.src='https://www.salkunrakentaja.fi/wp-content/uploads/2014/12/siili-perushahmo.png';"
+            src="{{result.images}}" alt="Card image cap" />
+          <div class="card-price-holder"> {{result.price|currency}}</div>
+        </a>
+        <div class="card-body">
+          <h4 class="card-title">{{result.objname}}</h4>
+          <p class="card-text">{{result.objinfo}}</p>
+          <a href="/product/{{result.objectid}}" class="btn btn-primary">Buy Now!</a>
+        </div>
       </div>
-    </div>
   </div>
 </div>
