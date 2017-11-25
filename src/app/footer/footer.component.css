@@ -31,7 +31,7 @@
   padding: 40px 0 10px;
   text-transform: uppercase;
 }
-.footer ul {
+.footer ul, .footer p {
   font-size: 13px;
   list-style-type: none;
   margin-left: 0;
@@ -125,7 +125,9 @@
   background: #E3E3E3;
   border-top: 1px solid #DDDDDD;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 44px;
+  padding-left: 10px;
+  font-size: 13px;
 }
 .footer-bottom p.pull-left {
   padding-top: 6px;
