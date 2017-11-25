@@ -21,6 +21,7 @@ const appRoutes: Routes = [
   {path: 'register', component: RegistrationComponent},  
   { path: "404", component: FourOhfourComponent },
   { path: "**", redirectTo: "/404" }
+]
 
 @NgModule({
   declarations: [

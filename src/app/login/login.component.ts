@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
     window.localStorage.setItem('token', JSON.stringify({name: 'Rafay Khan'}))
     console.log("submit works");
     this.router.navigate(['/dashboard']);
+    location.reload();
   }
 
 }

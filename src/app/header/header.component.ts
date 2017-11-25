@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   
-  isLoggedin = !!window.localStorage.getItem('token');
-  constructor() { }
-
+  isLoggedin;
+  constructor(private router:Router) { }
+  logout(){
+    window.localStorage.removeItem('token');
+    this.router.navigate(['/']);
+    location.reload();
+  }
   ngOnInit() {
+    this.isLoggedin = !!window.localStorage.getItem('token');
   }
 
 }
