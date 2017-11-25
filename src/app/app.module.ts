@@ -15,6 +15,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { FormsModule }   from '@angular/forms';
 import { ProductComponent } from './product/product.component';
+import { AllresultService } from './allresult.service';
 
 const appRoutes: Routes = [
   { path: "search/:id", component: SearchComponent, canActivate: [AuthGuardService] },
@@ -39,7 +40,7 @@ const appRoutes: Routes = [
     ProductComponent,
   ],
   imports: [BrowserModule, RouterModule.forRoot(appRoutes), FormsModule],
-  providers: [AuthService, AuthGuardService],
+  providers: [AuthService, AuthGuardService, AllresultService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

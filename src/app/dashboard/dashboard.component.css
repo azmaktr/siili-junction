@@ -55,5 +55,16 @@ the search button appears before the search field!!!)
 .search-box {
   padding: 40px;
   background-color: #f48342;
-  color: white;
+  color: white ;
+}
+
+.search-box h4{
+  color: white ;
+  
+}
+.store-help a {
+  color: #d62d20;
+}
+.store-help{
+  margin-bottom: 20px;
 }

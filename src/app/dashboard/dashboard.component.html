@@ -1,4 +1,4 @@
-<h1>Howdy {{data.name}}</h1>
+<h1>Howdy {{data.name}}!</h1>
 <form>
   <div class="row animated fadeInLeft">
     <div class=" col-md-12">
@@ -16,14 +16,31 @@
 </form>
 <br />
 <br />
-<h3>Some Stuff About Us</h3>
 
 <!-- start slipsum code -->
-
-<p>The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed
-  is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his
-  brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger
-  those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance
-  upon thee. </p>
+<div class="row">
+  <div class="col-12">
+    <div class="store-help">
+      <h3>Want your ad in here?</h3>
+      <p>Do you have stuff laying around in your basement? you can use our service to rent/sell it. We provide a platform which reduces the carbon footprint in the world by connecting buyers who can manage their basement storage by using our application and additionally sell/rent the stuff which they don't need right away. Sounds interesting? </p>
+      <a href="/about-us">This is how you can do it!</a>
+    </div>
+  </div>
+</div>
 
 <!-- end slipsum code -->
+
+<h2>Your last search results:</h2>
+<p *ngIf="!searched">You haven't searched anything yet.</p>
+<div *ngIf="searched" class="row">
+  <div class="col-3" *ngFor="let result of results; let i=index">
+    <div class="card card-{{i}}">
+      <img class="card-img-top " src="{{result.image}}" alt="Card image cap">
+      <div class="card-body">
+        <h4 class="card-title">{{result.title}}</h4>
+        <p class="card-text">{{result.description}}</p>
+        <a href="/product/{{result.id}}" class="btn btn-primary">Go Buy!</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AllresultService } from '../allresult.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,8 +10,10 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
   data;
-
-  constructor(private router:Router) { }
+  lastSearch;
+  results = [];
+  searched;
+  constructor(private router:Router, private allResults: AllresultService) { }
   onSubmit(form){
     const id = form.value.id;
     this.router.navigate([`search/${id}`]);
@@ -18,6 +21,11 @@ export class DashboardComponent implements OnInit {
   }
   ngOnInit() {
     this.data = JSON.parse(localStorage.getItem('token'));
+    this.lastSearch = localStorage.getItem('lastsearch');
+    this.searched = !!this.lastSearch;
+    if (!!this.lastSearch){
+      this.results = this.allResults.searchQty(this.lastSearch, 4);
+    }
   }
 
 }
