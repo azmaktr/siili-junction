@@ -45,3 +45,8 @@ the search button appears before the search field!!!)
   left:100%; /* push to the right! */
   margin-left:10px; /* this is the `button distance from search field` */
 }
+
+.input-txt{
+  height: 100%;
+  width: 40%;
+}
