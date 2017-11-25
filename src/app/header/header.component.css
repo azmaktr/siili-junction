@@ -9,6 +9,10 @@
     padding: 8px;
     color: black !important;
 }
+.nav-link{
+    color: #f48342;
+    font-weight: bold;
+}
 .label,.glyphicon { margin-right:5px; }
 .page-container{ 
     padding: 0px 20px;

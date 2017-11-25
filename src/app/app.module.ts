@@ -13,6 +13,7 @@ import { AuthService } from "./services/auth.service";
 import { AuthGuardService } from "./services/auth-guard.service";
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { FormsModule }   from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: "search/:id", component: SearchComponent, canActivate: [AuthGuardService] },
@@ -34,7 +35,7 @@ const appRoutes: Routes = [
     DashboardComponent,
     RegistrationComponent,
   ],
-  imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
+  imports: [BrowserModule, RouterModule.forRoot(appRoutes), FormsModule],
   providers: [AuthService, AuthGuardService],
   bootstrap: [AppComponent]
 })

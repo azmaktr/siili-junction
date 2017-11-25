@@ -4,18 +4,18 @@ we could easily expand this element to 100% width without worrying about
 the `padding` and `border-width` calculation.
 */
 
-.searchForm input {box-sizing:border-box}
-
+.searchForm input {
+  box-sizing: border-box;
+}
 
 /*
 create the room for the button using `margin`
 */
 
 .searchForm > div {
-  position:relative;
-  margin-right:110px; /* same with `button width` + `button distance from search field` */
+  position: relative;
+  margin-right: 110px; /* same with `button width` + `button distance from search field` */
 }
-
 
 /*
 SEARCH FIELD: the `box-sizing` value for this element already set as `border-box`
@@ -25,10 +25,9 @@ expand this element to 100% width!
 */
 
 .searchForm input[type="text"] {
-  display:block;
-  width:100%;
+  display: block;
+  width: 100%;
 }
-
 
 /*
 SEARCH BUTTON: the last step is to make the button pushed to the right by using absolute position
@@ -38,15 +37,23 @@ the search button appears before the search field!!!)
 */
 
 .searchForm input[type="button"] {
-  display:block;
-  width:100px; /* this is the `button width` */
-  position:absolute;
-  top:0;
-  left:100%; /* push to the right! */
-  margin-left:10px; /* this is the `button distance from search field` */
+  display: block;
+  width: 100px; /* this is the `button width` */
+  position: absolute;
+  top: 0;
+  left: 100%; /* push to the right! */
+  margin-left: 10px; /* this is the `button distance from search field` */
+  background-color: white;
+  color: black;
 }
 
-.input-txt{
-  height: 100%;
-  width: 40%;
+.input-txt {
+  height: 38px;
+  width: 91%;
+}
+
+.search-box {
+  padding: 40px;
+  background-color: #f48342;
+  color: white;
 }

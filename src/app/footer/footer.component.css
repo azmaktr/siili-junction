@@ -24,7 +24,6 @@
 }
 .footer h3 {
   border-bottom: 1px solid #BAC1C8;
-  color: #54697E;
   font-size: 18px;
   font-weight: 600;
   line-height: 27px;
@@ -37,14 +36,14 @@
   margin-left: 0;
   padding-left: 0;
   margin-top: 15px;
-  color: #7F8C8D;
+  color: #d62d20;
 }
 .footer ul li a {
   padding: 0 0 5px 0;
   display: block;
 }
 .footer a {
-  color: #78828D
+  color: #d62d20;
 }
 .supportLi h4 {
   font-size: 20px;
@@ -73,6 +72,8 @@
   padding: 0;
   width: 100%;
   color: #fff;
+  font-weight:bold;
+  background-color: #f48342;
 }
 .newsletter-box {
   overflow: hidden;
@@ -82,8 +83,8 @@
   box-shadow: 0 1px 0 #B4B3B3;
 }
 .social li {
-  background: none repeat scroll 0 0 #B5B5B5;
-  border: 2px solid #B5B5B5;
+  background: none repeat scroll 0 0 #f48342;
+  border: 2px solid #d62d20;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -o-border-radius: 50%;
