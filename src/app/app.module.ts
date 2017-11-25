@@ -18,7 +18,6 @@ const appRoutes: Routes = [
   { path: '404', component: FourOhfourComponent },
   {path: 'register', component: RegistrationComponent},
   { path: '**', redirectTo: '/404' }
->>>>>>> Stashed changes
 ];
 
 @NgModule({
@@ -28,17 +27,7 @@ const appRoutes: Routes = [
     LoginComponent,
     FooterComponent,
     SearchComponent,
-<<<<<<< Updated upstream
-    FourOhfourComponent
-=======
-    FourOhfourComponent,
     RegistrationComponent,
-  ],
-  imports: [
-    BrowserModule,
-    RouterModule.forRoot(
-      appRoutes    )
->>>>>>> Stashed changes
   ],
   imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
   providers: [AuthService, AuthGuardService],
