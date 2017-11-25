@@ -10,3 +10,6 @@
     color: black !important;
 }
 .label,.glyphicon { margin-right:5px; }
+.page-container{ 
+    padding: 0px 20px;
+}
