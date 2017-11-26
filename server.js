@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 // Run the app by serving the static files
 // in the dist directory
-app.use(express.static(path.join(__dirname + 'dist')));
+app.use(express.static(path.join(__dirname + 'src')));
 // Start the app by listening on the default
 // Heroku port
 app.listen(process.env.PORT || 8080);
@@ -14,7 +14,7 @@ app.listen(process.env.PORT || 8080);
 // so that PathLocationStrategy can be used
 app.get('/*', function(req, res) {
   console.log(__dirname); 
-  res.sendFile('/dist/index.html', { root: __dirname });
+  res.sendFile('/src/index.html', { root: __dirname });
 });
 
 console.log('listening');
