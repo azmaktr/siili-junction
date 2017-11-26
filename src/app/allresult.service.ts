@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Observable } from "RxJS/Rx";
+//import { Observable } from "RxJS/Rx";
 import { Http, Headers, RequestOptions } from "@angular/http";
 // Statics
 import "rxjs/add/observable/throw";
