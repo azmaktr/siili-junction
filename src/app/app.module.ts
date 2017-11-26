@@ -17,28 +17,39 @@ import { RegistrationComponent } from "./registration/registration.component";
 import { FormsModule } from "@angular/forms";
 import { ProductComponent } from "./product/product.component";
 import { AllresultService } from "./allresult.service";
-import { AllprodsComponent } from './allprods/allprods.component';
+import { AllprodsComponent } from "./allprods/allprods.component";
 
 const appRoutes: Routes = [
   {
     path: "search/:id",
     component: SearchComponent,
+    data: { title: "Search Results" },
     canActivate: [AuthGuardService]
   },
   {
     path: "explore",
     component: AllprodsComponent,
+    data: { title: "All Products" },
     canActivate: [AuthGuardService]
   },
-  { path: "", component: LoginComponent },
+  { path: "", component: LoginComponent, data: { title: "Home" } },
   {
     path: "dashboard",
     component: DashboardComponent,
-    canActivate: [AuthGuardService]
+    canActivate: [AuthGuardService],
+    data: { title: "Dashboard" }
   },
   { path: "register", component: RegistrationComponent },
-  { path: "product/:id", component: ProductComponent },
-  { path: "404", component: FourOhfourComponent },
+  {
+    path: "product/:id",
+    component: ProductComponent,
+    data: { title: "Product Detail" }
+  },
+  {
+    path: "404",
+    component: FourOhfourComponent,
+    data: { title: "Page Not Found" }
+  },
   { path: "**", redirectTo: "/404" }
 ];
 
