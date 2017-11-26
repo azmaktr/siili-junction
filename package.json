@@ -2,9 +2,9 @@
   "name": "siili-junction",
   "version": "0.0.0",
   "license": "MIT",
+  "main": "server.js",
   "scripts": {
     "ng": "ng",
-    "postinstall": "ng build",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
@@ -14,8 +14,10 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^5.0.0",
+    "@angular/cli": "1.5.4",
     "@angular/common": "^5.0.0",
     "@angular/compiler": "^5.0.0",
+    "@angular/compiler-cli": "^5.0.0",
     "@angular/core": "^5.0.0",
     "@angular/forms": "^5.0.0",
     "@angular/http": "^5.0.0",
@@ -25,12 +27,9 @@
     "core-js": "^2.4.1",
     "express": "^4.16.2",
     "rxjs": "^5.5.2",
-    "zone.js": "^0.8.14",
-    "@angular/cli": "1.5.4"
+    "zone.js": "^0.8.14"
   },
   "devDependencies": {
-    "@angular/cli": "1.5.4",
-    "@angular/compiler-cli": "^5.0.0",
     "@angular/language-service": "^5.0.0",
     "@types/jasmine": "~2.5.53",
     "@types/jasminewd2": "~2.0.2",
@@ -51,6 +50,6 @@
     "typescript": "~2.4.2"
   },
   "engines": {
-    "node": "6.10.3"
+    "node": "~6.10.3"
   }
 }
