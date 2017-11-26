@@ -34,10 +34,10 @@
 
 <h2>Your last search results:</h2>
 <p *ngIf="!searched">You haven't searched anything yet.</p>
-  <p *ngIf="searched&&!results">Loading...
+  <p *ngIf="searched && !results">Loading...
     <img width="80px" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" />
   </p>
-  <div *ngIf="searched&&results" class="row">
+  <div *ngIf="searched && results" class="row">
     <div class="col-3 animated fadeIn" *ngFor="let result of results; let i=index">
       <div class="card card-{{i}}">
         <a href="/product/{{result.objectid}}" class="card-img-holder">

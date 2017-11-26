@@ -6,7 +6,8 @@
 	<div class="col-3 animated fadeIn" *ngFor="let result of results; let i=index">
 		<div class="card card-{{i}}">
 			<a href="/product/{{result.objectid}}" class="card-img-holder">
-				<img class="card-img-top " src="{{result.images}}" alt="Card image cap" />
+				<img class="card-img-top " onError="this.src='https://www.salkunrakentaja.fi/wp-content/uploads/2014/12/siili-perushahmo.png';"
+				src="{{result.images}}" alt="Card image cap" />				
 				<div class="card-price-holder"> {{result.price|currency}}</div>
 			</a>
 			<div class="card-body">
